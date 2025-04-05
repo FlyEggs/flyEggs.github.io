@@ -10,25 +10,23 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="## 测试测试测试
-### 测试喵！！
+<meta name="description" content="## 第二章 监督学习
 
-### 测试喵！！
+ 参考书籍: 《Python机器学习基础教程》
 
-![Image](https://github.com/user-attachments/assets/8aebe056-242a-44f1-9a5a-ebbf669bdb83)
 
-Sigmoid函数:
-$$Sigmoid(x)=\frac{1}{1+e^{-x}}$$。">
+### 2.1 分类与回归
+
+监督学习的主要研究问题分为 **分类** 和 **回归** 两种。">
 <meta property="og:title" content="Test测试喵">
-<meta property="og:description" content="## 测试测试测试
-### 测试喵！！
+<meta property="og:description" content="## 第二章 监督学习
 
-### 测试喵！！
+ 参考书籍: 《Python机器学习基础教程》
 
-![Image](https://github.com/user-attachments/assets/8aebe056-242a-44f1-9a5a-ebbf669bdb83)
 
-Sigmoid函数:
-$$Sigmoid(x)=\frac{1}{1+e^{-x}}$$。">
+### 2.1 分类与回归
+
+监督学习的主要研究问题分为 **分类** 和 **回归** 两种。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://flyEggs.github.io/post/Test-ce-shi-miao.html">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/71497323?v=4">
@@ -89,12 +87,30 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><h2>测试测试测试</h2>
-<h3>测试喵！！</h3>
-<h3>测试喵！！</h3>
-<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/8aebe056-242a-44f1-9a5a-ebbf669bdb83"><img src="https://github.com/user-attachments/assets/8aebe056-242a-44f1-9a5a-ebbf669bdb83" alt="Image" style="max-width: 100%;"></a></p>
-<p>Sigmoid函数:<br>
-$$Sigmoid(x)=\frac{1}{1+e^{-x}}$$</p></div>
+<div class="markdown-body" id="postBody"><h2>第二章 监督学习</h2>
+<p>参考书籍: 《Python机器学习基础教程》</p>
+<h3>2.1 分类与回归</h3>
+<p>监督学习的主要研究问题分为 <strong>分类</strong> 和 <strong>回归</strong> 两种。<strong>分类任务</strong>是将数据分成不同的类别（比如判断邮件是垃圾邮件还是正常邮件），<strong>回归任务</strong>是预测一个连续的数值（比如预测房价）。</p>
+<h3>2.2 泛化、过拟合和欠拟合</h3>
+<p><strong>泛化</strong>：模型在新数据上的表现能力，越好说明模型越有<strong>泛化能力</strong>。</p>
+<p><strong>过拟合</strong>：模型在训练数据上表现非常好，但在新数据上表现差，说明模型过度复杂，<strong>记住了噪声</strong>。</p>
+<p><strong>欠拟合</strong>：模型过于简单，无法捕捉数据中的模式，导致在训练和测试数据上都表现不佳。</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/f22fc2b6-f062-49f1-aa55-887eddefbfab"><img src="https://github.com/user-attachments/assets/f22fc2b6-f062-49f1-aa55-887eddefbfab" alt="Image" style="max-width: 100%;"></a></p>
+<h4>2.3 监督学习</h4>
+<h4>2.3.1 一些样本数据</h4>
+<p>《Python机器学习基础教程》在2.3中介绍了几个在第二章节中会用到的数据：</p>
+<p>mglearn.datasets.make_forge() <code class="notranslate">机器生成的分类数据</code></p>
+<p>mglearn.datasets.make_wave() <code class="notranslate">机器生成的回归数据</code></p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/4050d4b8-40ce-4e3c-a71f-6ef671140fb0"><img src="https://github.com/user-attachments/assets/4050d4b8-40ce-4e3c-a71f-6ef671140fb0" alt="Image" style="max-width: 100%;"></a></p>
+<p>除此以外还有一些现实生活中的高维度数据集，它们内置在了sklearn.datasets中:</p>
+<ul>
+<li>load_breast_cancer()  <code class="notranslate">威斯康星州乳腺癌数据集</code></li>
+<li>load_boston()  <code class="notranslate">波士顿房价数据集</code></li>
+</ul>
+<blockquote>
+<p><code class="notranslate">波士顿房价数据集</code>在新版本的<code class="notranslate">sklearn</code>中因为<strong>人道问题</strong>被移除，无法再使用《Python机器学习基础教程》中介绍的 from sklearn.datasets import load_boston()方式调用了。</p>
+</blockquote>
+<h4>2.3.2 K邻近</h4></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
@@ -195,6 +211,6 @@ function iFrameLoading(){
 
 
 </script>
-<script>MathJax = {tex: {inlineMath: [["$", "$"]]}};</script><script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 
 </html>
