@@ -188,7 +188,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>上图展示了邻居的数量与正确率的关系，调大n_neighbors则导致训练集精度下降，测试集精度上升，折衷点在n_neighbors=6，此时模型既不会过拟合也不会欠拟合，这就是调参。</p>
 <h5>KNN回归</h5>
 <p>k 近邻算法还可以用于回归，预测的值选择与其最近的n个点的平均值。用于回归的 k 近邻算法在 scikit-learn 的 KNeighborsRegressor 类中实现。其用法与 KNeighborsClassifier 类似。</p>
-<p><a target="_blank" rel="noopener noreferrer" href=""><img alt="knn_reg" style="max-width: 100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/1b40439c-01cf-458c-bdcd-54c9a95d00ee"><img src="https://github.com/user-attachments/assets/1b40439c-01cf-458c-bdcd-54c9a95d00ee" alt="Image" style="max-width: 100%;"></a></p>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">mglearn</span>
 <span class="pl-k">from</span> <span class="pl-s1">sklearn</span>.<span class="pl-s1">model_selection</span> <span class="pl-k">import</span> <span class="pl-s1">train_test_split</span>
 <span class="pl-k">from</span> <span class="pl-s1">sklearn</span>.<span class="pl-s1">neighbors</span> <span class="pl-k">import</span> <span class="pl-v">KNeighborsRegressor</span>

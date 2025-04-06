@@ -129,7 +129,7 @@ plt.show()
 
 k 近邻算法还可以用于回归，预测的值选择与其最近的n个点的平均值。用于回归的 k 近邻算法在 scikit-learn 的 KNeighborsRegressor 类中实现。其用法与 KNeighborsClassifier 类似。
 
-<img src="C:\Users\flyeg\Desktop\Python机器学习\knn_reg.png" alt="knn_reg" style="zoom: 67%;" />
+![Image](https://github.com/user-attachments/assets/1b40439c-01cf-458c-bdcd-54c9a95d00ee)
 
 ```python
 import mglearn
